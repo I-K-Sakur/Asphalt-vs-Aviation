@@ -59,8 +59,8 @@ public class AshphaltAIController : MonoBehaviour
 
     void DetectTurn()
     {
-        Vector3 CameraPosition= Camera.main.transform.position;
-        Ray ray =new Ray(CameraPosition,Camera.main.transform.forward*100f);
+        Vector3 CarPosition= transform.position;
+        Ray ray =new Ray(CarPosition,transform.forward*100f);
         Debug.DrawRay(ray.origin, transform.TransformDirection(Vector3.forward)*100,  Color.white, 1f);
        RaycastHit hit;
        if(Physics.Raycast(transform.position,transform.TransformDirection(Vector3.forward)*100,out hit,detectionradius))
@@ -82,8 +82,8 @@ public class AshphaltAIController : MonoBehaviour
 
     void CheckForEnemy()
     {
-      Vector3 CameraPosition= Camera.main.transform.position;
-      Ray rayup=new Ray(CameraPosition,Camera.main.transform.up*10f);
+      Vector3 CarPosition= transform.position;
+      Ray rayup=new Ray(CarPosition,transform.up*10f);
       Debug.DrawRay(rayup.origin,transform.TransformDirection(Vector3.up)*50,Color.red,1f);
       RaycastHit hitup;
       if(Physics.Raycast(rayup,out hitup))

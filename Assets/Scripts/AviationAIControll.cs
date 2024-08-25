@@ -81,11 +81,11 @@ public class AviationAIControll : MonoBehaviour
     void DetectBorder()
     {
         Vector3 RayCastPosition = Propeller.transform.position;
-        Ray rayforward = new Ray(RayCastPosition, transform.forward);
+        Ray rayforward = new Ray(RayCastPosition, transform.forward*50f);
         RaycastHit hitForward;
         Debug.DrawRay(rayforward.origin, transform.TransformDirection(Vector3.forward) * 20f, Color.white);
 
-        if (Physics.Raycast(rayforward, out hitForward, 20f))
+        if (Physics.Raycast(rayforward, out hitForward, 50f))
         {
             if (hitForward.collider.CompareTag("BackBorder") ||
                 hitForward.collider.CompareTag("RightBorder") ||
