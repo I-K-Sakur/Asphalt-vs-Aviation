@@ -25,7 +25,8 @@ To know about the developer check the "ABOUT" section.
 [Happy Gaming]
 Watch on youtube:
 https://youtu.be/vuXLhs8Wm8M?si=pInT_NForpWhFuQu
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vuXLhs8Wm8M?si=pInT_NForpWhFuQu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 Developer's link:
 linked-in: https://www.linkedin.com/in/md-iftakhar-kabir-sakur/
+
 email: mdiftakharkabirsakur@gmail.com
