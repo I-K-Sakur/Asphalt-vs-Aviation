@@ -8,7 +8,7 @@ public class BeginningEnter : MonoBehaviour
     public GameObject GameStartUI;
     public GameObject ButtonAndOther;
      public GameObject MainMenu;
-      public GameObject QuitMenu;
+    // public GameObject QuitMenu;
     public GameObject GameOverUI;
     public GameObject AviationSlider;
     public GameObject AshphaltSlider;
@@ -16,8 +16,8 @@ public class BeginningEnter : MonoBehaviour
     public GameObject About;
     public GameObject[] Back;
     public static bool eiholoshuru;
-    public GameObject quit;
-    public GameObject[] sliders;
+   public GameObject quit;
+ 
     public GameObject GamePlayAudio;
     public GameObject GameStartAudio;
     public GameObject AudioCamera;
@@ -39,13 +39,13 @@ public class BeginningEnter : MonoBehaviour
             Back[i].SetActive(false);
         }
         Help.SetActive(false);
-        quit.SetActive(false);
+        //quit.SetActive(false);
         About.SetActive(false);
         MainMenuButton.SetActive(false);
         GameStartUI.SetActive(true);
         ButtonAndOther.SetActive(false);
         MainMenu.SetActive(false);
-        QuitMenu.SetActive(false);
+         //QuitMenu.SetActive(false);
         GameOverUI.SetActive(false);
         AviationSlider.SetActive(false);
         AshphaltSlider.SetActive(false);
@@ -53,8 +53,8 @@ public class BeginningEnter : MonoBehaviour
         behaviourofelements.AshphaltScore=5;
         AviationWeaponBehaviour AviationWeaponBehaviour=FindObjectOfType<AviationWeaponBehaviour>();
         AviationWeaponBehaviour.GameScore=5;
-         sliders[1].SetActive(false);
-       sliders[2].SetActive(false);
+      //    sliders[1].SetActive(false);
+      //  sliders[2].SetActive(false);
 
     }
 
@@ -63,15 +63,15 @@ public class BeginningEnter : MonoBehaviour
     {
         if(eiholoshuru==false && Input.GetKeyDown(KeyCode.Return))
         {
-        //  for(int i=0;i<8;i++)
-        // {
-        //     Back[i].SetActive(false);
-        // }
+           GameStartUI.SetActive(false);
+           
+       
            MainMenuButton.SetActive(true);
            Help.SetActive(true);
            About.SetActive(true);
            quit.SetActive(true);
-           GameStartUI.SetActive(false);
+           //QuitMenu.SetActive(true);
+          
            eiholoshuru=true;
         //    text[1].SetActive(false);
         //    text[2].SetActive(false);

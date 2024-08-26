@@ -4,13 +4,19 @@ using UnityEngine;
 
 public class GameStartAudio : MonoBehaviour
 {
-    // Start is called before the first frame update
-public AudioSource AudioStart;
-public AudioListener[] AudioListeners;
-    // Update is called once per frame
+    public AudioSource AudioStart;
+    public AudioListener[] AudioListeners;
 
-    void Update()
+    void Start()
     {
-        AudioStart.Play();
+        // Ensure the AudioSource is enabled before playing
+        if (AudioStart != null && AudioStart.enabled && AudioStart.gameObject.activeInHierarchy)
+        {
+            AudioStart.Play();
+        }
+        else
+        {
+            Debug.LogError("AudioSource is either null, disabled, or the GameObject is inactive.");
+        }
     }
 }
